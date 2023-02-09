@@ -1,0 +1,8 @@
+.socials {
+	svg {
+		transition: var(--transition);
+		&:hover {
+			color: white;
+		}
+	}
+}

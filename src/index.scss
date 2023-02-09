@@ -1,0 +1,227 @@
+body {
+	margin: 0;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
+		"Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
+		"Helvetica Neue", sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+code {
+	font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+		monospace;
+}
+/*
+    CSS RESETS COURTOUSY OF JOSH COMEAU
+    https://www.joshwcomeau.com/css/custom-css-reset/
+  1. Use a more-intuitive box-sizing model.
+*/
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+/*
+  2. Remove default margin
+*/
+* {
+	margin: 0;
+}
+/*
+  3. Allow percentage-based heights in the application
+*/
+html,
+body {
+	height: 100%;
+}
+/*
+  Typographic tweaks!
+  4. Add accessible line-height
+  5. Improve text rendering
+*/
+body {
+	line-height: 1.5;
+	-webkit-font-smoothing: antialiased;
+}
+/*
+  6. Improve media defaults
+*/
+img,
+picture,
+video,
+canvas,
+svg {
+	display: block;
+	max-width: 100%;
+}
+/*
+  7. Remove built-in form typography styles
+*/
+input,
+button,
+textarea,
+select {
+	font: inherit;
+}
+/*
+  8. Avoid text overflows
+*/
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	overflow-wrap: break-word;
+}
+/*
+  9. Create a root stacking context
+*/
+#root,
+#__next {
+	isolation: isolate;
+}
+
+body {
+	font-family: "Fira Sans Condensed", sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+code {
+	font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+		monospace;
+}
+
+a {
+	text-decoration: none;
+	color: #000000;
+}
+
+::-webkit-scrollbar {
+	display: none;
+}
+
+:root {
+	--bg: #1f1f38;
+	--bg-variant: #2c2c6c;
+	--primary: #4db5ff;
+	--primary-variant: #4db5e166;
+	--white: #ffffff;
+	--light: #ffffff66;
+
+	--container-width-lg: 75%;
+	--container-width-md: 86%;
+	--container-width-sm: 90%;
+
+	--transition: all 400ms ease;
+}
+
+html {
+	scroll-behavior: smooth;
+	font-family: "Inter", sans-serif;
+}
+
+body {
+	background-color: var(--bg);
+	color: var(--white);
+	line-height: 1.7;
+	background-image: url(../src/assets/bg-texture.png);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-weight: 500;
+}
+
+h1 {
+	font-size: 2.5rem;
+}
+
+.container {
+	width: var(--container-width-lg);
+	margin: 0 auto;
+}
+
+.section {
+	margin-top: 8rem;
+
+	& > h2,
+	& > h5 {
+		text-align: center;
+		color: var(--light);
+	}
+
+	& > h2 {
+		color: var(--primary);
+		margin-bottom: 3rem;
+	}
+}
+
+.text-light {
+	color: var(--light);
+}
+
+a {
+	color: var(--primary);
+	transition: var(--transition);
+
+	&:hover {
+		color: (--white);
+	}
+}
+
+.btn {
+	display: inline-block;
+	width: max-content;
+	padding: 0.75rem 1.2rem;
+	border: 1px solid var(--primary);
+	border-radius: 0.4rem;
+	color: (--primary);
+	cursor: pointer;
+	transition: var(--transition);
+
+	&:hover {
+		background-color: var(--white);
+		color: var(--bg);
+		border-color: transparent;
+	}
+}
+
+.btn-primary {
+	background-color: var(--primary);
+	color: var(--bg);
+}
+
+img {
+	display: block;
+	width: 100%;
+	object-fit: cover;
+}
+
+// Media Queries (Medium Devices)
+@media (max-width: 1024px) {
+	.container {
+		width: var(--container-width-md);
+	}
+
+	.section {
+		margin-top: 6rem;
+	}
+}
+
+// Media Queries (Small Devices)
+@media (max-width: 600px) {
+	.container {
+		width: var(--container-width-sm);
+	}
+
+	.section > h2 {
+		margin-bottom: 2rem;
+	}
+}
