@@ -15,7 +15,7 @@ import {
 } from "react-icons/si";
 
 import { FaReact, FaVuejs, FaWordpress, FaOpencart } from "react-icons/fa";
-import SpinningCard from "../spinning-card/spinning-card.component";
+import SpinningCard from "../spinningCard/spinning-card.component";
 
 const Experience = () => {
 	return (

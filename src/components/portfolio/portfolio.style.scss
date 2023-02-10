@@ -1,0 +1,13 @@
+#portfolio {
+	.portfolio__title-container {
+		text-align: center;
+		margin-bottom: 4rem;
+	}
+
+	.portfolio__container {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		gap: 3rem;
+	}
+}

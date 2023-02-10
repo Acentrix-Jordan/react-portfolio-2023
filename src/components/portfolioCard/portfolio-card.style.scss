@@ -1,0 +1,17 @@
+.portfolioCard__container {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 1rem;
+	padding: 1.5rem;
+	border-radius: 1rem;
+	text-align: center;
+	background-color: var(--bg-variant);
+	max-width: 22rem;
+
+	img {
+		border-radius: 1rem;
+		border: 1px solid beige;
+	}
+}
