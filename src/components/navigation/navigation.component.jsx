@@ -55,16 +55,6 @@ const Navigation = () => {
 				<span>Portfolio</span>
 			</a>
 			<a
-				href="#services"
-				className={
-					activeNav == "#services" ? "nav__link active" : "nav__link"
-				}
-				onClick={() => setActiveNav("#services")}
-			>
-				<MdDesignServices />
-				<span>Services</span>
-			</a>
-			<a
 				href="#contact"
 				className={
 					activeNav == "#contact" ? "nav__link active" : "nav__link"
