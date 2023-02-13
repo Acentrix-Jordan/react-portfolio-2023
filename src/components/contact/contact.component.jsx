@@ -6,6 +6,14 @@ import { useForm } from "react-hook-form";
 import { HiPhone } from "react-icons/hi";
 import { MdBusinessCenter, MdEmail } from "react-icons/md";
 
+import { submitFormToDb } from "../../utils/firebase.utils";
+
+/**
+ * TODO:
+ * 1. Integrate ReCaptcha
+ * 2. Remove Firebase Permissions
+ */
+
 const Contact = () => {
 	const {
 		register,
@@ -18,6 +26,7 @@ const Contact = () => {
 
 	const onSubmit = (data) => {
 		console.log(data);
+		submitFormToDb(data);
 	};
 
 	useEffect(() => {
