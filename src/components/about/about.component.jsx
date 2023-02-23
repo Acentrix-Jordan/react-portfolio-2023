@@ -27,13 +27,12 @@ const About = () => {
 				</div>
 				<div className="about__content">
 					<div className="about__cards">
-						{/* TODO: Componentise the card */}
 						<div className="about__card">
 							<FaGem />
 							<h5>
 								<strong>Experience</strong>
 							</h5>
-							<p>1 Year Experience</p>
+							<p>2 Years of Coding Experience</p>
 						</div>
 						<div className="about__card">
 							<AiFillFolderOpen />
@@ -50,7 +49,6 @@ const About = () => {
 							<p>236+</p>
 						</div>
 					</div>
-					{/* TODO: Add Content */}
 					<p>
 						Lorem ipsum, dolor sit amet consectetur adipisicing
 						elit. Ea hic nobis repudiandae iste similique pariatur

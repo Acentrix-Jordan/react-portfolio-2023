@@ -1,6 +1,6 @@
 import "./header.style.scss";
 
-import CV from "../../assets/cv.pdf";
+import CV from "../../assets/jordan-wilson-cv.pdf";
 import ME from "../../assets/me.png";
 
 import CtaButton from "../buttons/cta-button/cta-button.component";
@@ -8,11 +8,11 @@ import Socials from "../socials/socials.component";
 
 const Header = () => {
 	return (
-		<header>
+		<header id="header">
 			<div className="container header__container">
-				<h5>Hello I'm</h5>
+				<h5>Hello, I'm</h5>
 				<h1>Jordan Wilson</h1>
-				<h5 className="text-light">Front End Developer</h5>
+				<h5 className="text-light">Your favourite Front End Ninja</h5>
 				<div className="header__cta-container">
 					<CtaButton
 						href={CV}

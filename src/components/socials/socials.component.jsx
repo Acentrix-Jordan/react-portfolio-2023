@@ -6,13 +6,13 @@ const Socials = () => {
 	return (
 		<div className="socials">
 			<a
-				href="https://linkedin.com"
+				href="https://www.linkedin.com/in/jordan-wilson-310030151/"
 				target="_blank"
 			>
 				<BsLinkedin />
 			</a>
 			<a
-				href="https://github.com"
+				href="https://github.com/Acentrix-Jordan"
 				target="_blank"
 			>
 				<BsGithub />

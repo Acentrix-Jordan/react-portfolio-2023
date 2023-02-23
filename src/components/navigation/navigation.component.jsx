@@ -3,21 +3,39 @@ import "./navigation.style.scss";
 import { AiFillHome, AiFillMessage } from "react-icons/ai";
 import { FaUserAstronaut } from "react-icons/fa";
 import { GiBrain, GiArchiveResearch } from "react-icons/gi";
-import { MdDesignServices } from "react-icons/md";
 
 import { useState } from "react";
+import { useEffect } from "react";
 
-// TODO: Componentize nav links
+const sections = ["#header", "#about", "#experience", "#portfolio", "#contact"];
 
 const Navigation = () => {
 	const [activeNav, setActiveNav] = useState("");
 
+	useEffect(() => {
+		setActiveNav("#header");
+
+		sections.forEach((section) => {
+			document.addEventListener("scroll", () => {
+				let bounding = document
+					.querySelector(`${section}`)
+					.getBoundingClientRect();
+
+				if (bounding.top < 200) {
+					setActiveNav(section);
+				}
+			});
+		});
+	}, []);
+
 	return (
 		<nav>
 			<a
-				href="#"
-				className={activeNav == "#" ? "nav__link active" : "nav__link"}
-				onClick={() => setActiveNav("#")}
+				href="#header"
+				className={
+					activeNav == "#header" ? "nav__link active" : "nav__link"
+				}
+				onClick={() => setActiveNav("#header")}
 			>
 				<AiFillHome />
 				<span>Home</span>

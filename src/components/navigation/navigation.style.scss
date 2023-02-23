@@ -2,15 +2,15 @@ nav {
 	position: fixed;
 	left: 50%;
 	bottom: 2rem;
-	transform: translateX(-50%);
 	display: flex;
-	margin: 0 auto;
 	gap: 1rem;
-	background-color: rgba(0, 0, 0, 0.5);
+	margin: 0 auto;
 	padding: 0.75rem 1.75rem;
+	background-color: rgba(0, 0, 0, 0.5);
 	max-width: max-content;
 	border-radius: 500px;
 	backdrop-filter: blur(15px);
+	transform: translateX(-50%);
 	z-index: 999;
 
 	.nav__link {
@@ -21,6 +21,13 @@ nav {
 
 		svg {
 			transition: all linear 0.2s;
+			width: 2rem;
+			height: 2rem;
+
+			@media screen and (min-width: 600px) {
+				width: 1rem;
+				height: 1rem;
+			}
 		}
 
 		&.active,
@@ -28,6 +35,14 @@ nav {
 			color: var(--white);
 			svg {
 				transform: translateY(-0.5rem);
+			}
+		}
+
+		span {
+			display: none;
+
+			@media screen and (min-width: 600px) {
+				display: block;
 			}
 		}
 	}

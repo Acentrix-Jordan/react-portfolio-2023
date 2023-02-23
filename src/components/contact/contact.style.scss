@@ -34,11 +34,14 @@
 	form {
 		display: flex;
 		flex-direction: column;
-		padding: 4rem;
+		gap: 1rem;
+		padding: 2rem;
 		border-radius: 1rem;
 		background-color: var(--white);
-		gap: 1rem;
-		min-width: 400px;
+
+		@media screen and (min-width: 600px) {
+			padding: 4rem;
+		}
 
 		h3 {
 			color: var(--bg-variant);
@@ -58,8 +61,8 @@
 
 			input,
 			textarea {
-				padding: 0.25rem 0.5rem;
 				appearance: none;
+				padding: 0.25rem 0.5rem;
 				border: 1px solid var(--primary);
 				border-radius: 0.5rem;
 			}
