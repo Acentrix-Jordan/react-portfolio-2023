@@ -7,14 +7,13 @@ import {
 	SiBootstrap,
 	SiTailwindcss,
 	SiPhp,
-	SiLaravel,
 	SiFirebase,
 	SiAdobeillustrator,
 	SiAdobephotoshop,
 	SiFigma,
 } from "react-icons/si";
 
-import { FaReact, FaVuejs, FaWordpress, FaOpencart } from "react-icons/fa";
+import { FaReact, FaVuejs, FaWordpress } from "react-icons/fa";
 import SpinningCard from "../spinningCard/spinning-card.component";
 
 const Experience = () => {
@@ -52,14 +51,8 @@ const Experience = () => {
 				<SpinningCard rearText="Wordpress">
 					<FaWordpress />
 				</SpinningCard>
-				<SpinningCard rearText="OpenCart">
-					<FaOpencart />
-				</SpinningCard>
 				<SpinningCard rearText="PHP">
 					<SiPhp />
-				</SpinningCard>
-				<SpinningCard rearText="Laravel">
-					<SiLaravel />
 				</SpinningCard>
 				<SpinningCard rearText="Firebase">
 					<SiFirebase />

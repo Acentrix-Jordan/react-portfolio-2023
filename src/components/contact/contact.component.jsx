@@ -1,18 +1,14 @@
 import "./contact.style.scss";
 
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
+import ReCAPTCHA from "react-google-recaptcha";
 
 import { HiPhone } from "react-icons/hi";
 import { MdBusinessCenter, MdEmail } from "react-icons/md";
 
 import { submitFormToDb } from "../../utils/firebase.utils";
-
-/**
- * TODO:
- * 1. Integrate ReCaptcha
- * 2. Remove Firebase Permissions
- */
+import { createRef } from "react";
 
 const Contact = () => {
 	const {
@@ -24,16 +20,36 @@ const Contact = () => {
 		submittedData,
 	} = useForm();
 
-	const onSubmit = (data) => {
-		console.log(data);
-		submitFormToDb(data);
-	};
-
 	useEffect(() => {
-		if (formState.isSubmitSuccessful) {
+		if (isSubmitSuccessful) {
 			reset();
 		}
-	}, [formState, submittedData, reset]);
+	}, [formState, submittedData, reset, isSubmitSuccessful]);
+
+	const recaptchaRef = createRef();
+
+	const [recaptchaState, setRecaptchaState] = useState(null);
+	const [isFormSuccessfullySubmitted, setisFormSuccessfullySubmitted] =
+		useState(false);
+
+	const onSubmit = (data) => {
+		if (!recaptchaState) {
+			alert("Please complete the ReCaptcha");
+			return;
+		}
+
+		data = {
+			...data,
+			date: new Date(),
+		};
+		submitFormToDb(data);
+		recaptchaRef.current.reset();
+		setisFormSuccessfullySubmitted(true);
+	};
+
+	const onChangeHandler = (value) => {
+		setRecaptchaState(value);
+	};
 
 	return (
 		<section
@@ -122,6 +138,17 @@ const Contact = () => {
 								</span>
 							)}
 						</div>
+						<ReCAPTCHA
+							ref={recaptchaRef}
+							sitekey={process.env.REACT_APP_RECAPTCHA_SITE_KEY}
+							onChange={onChangeHandler}
+						/>
+						{isFormSuccessfullySubmitted && (
+							<div className="success">
+								Thanks for submitting, I will be in touch soon
+							</div>
+						)}
+
 						<input
 							type="submit"
 							className="btn btn-primary"

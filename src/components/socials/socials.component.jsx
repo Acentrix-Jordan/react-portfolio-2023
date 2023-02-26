@@ -8,12 +8,14 @@ const Socials = () => {
 			<a
 				href="https://www.linkedin.com/in/jordan-wilson-310030151/"
 				target="_blank"
+				rel="noreferrer"
 			>
 				<BsLinkedin />
 			</a>
 			<a
 				href="https://github.com/Acentrix-Jordan"
 				target="_blank"
+				rel="noreferrer"
 			>
 				<BsGithub />
 			</a>

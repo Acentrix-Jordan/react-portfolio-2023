@@ -33,7 +33,7 @@ const Navigation = () => {
 			<a
 				href="#header"
 				className={
-					activeNav == "#header" ? "nav__link active" : "nav__link"
+					activeNav === "#header" ? "nav__link active" : "nav__link"
 				}
 				onClick={() => setActiveNav("#header")}
 			>
@@ -43,7 +43,7 @@ const Navigation = () => {
 			<a
 				href="#about"
 				className={
-					activeNav == "#about" ? "nav__link active" : "nav__link"
+					activeNav === "#about" ? "nav__link active" : "nav__link"
 				}
 				onClick={() => setActiveNav("#about")}
 			>
@@ -53,7 +53,7 @@ const Navigation = () => {
 			<a
 				href="#experience"
 				className={
-					activeNav == "#experience"
+					activeNav === "#experience"
 						? "nav__link active"
 						: "nav__link"
 				}
@@ -65,7 +65,9 @@ const Navigation = () => {
 			<a
 				href="#portfolio"
 				className={
-					activeNav == "#portfolio" ? "nav__link active" : "nav__link"
+					activeNav === "#portfolio"
+						? "nav__link active"
+						: "nav__link"
 				}
 				onClick={() => setActiveNav("#portfolio")}
 			>
@@ -75,7 +77,7 @@ const Navigation = () => {
 			<a
 				href="#contact"
 				className={
-					activeNav == "#contact" ? "nav__link active" : "nav__link"
+					activeNav === "#contact" ? "nav__link active" : "nav__link"
 				}
 				onClick={() => setActiveNav("#contact")}
 			>
