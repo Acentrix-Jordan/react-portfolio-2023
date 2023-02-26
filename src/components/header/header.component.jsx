@@ -1,6 +1,6 @@
 import "./header.style.scss";
 
-import CV from "../../assets/jordan-wilson-cv.pdf";
+import CV from "../../assets/jordan-wilson-front-end-developer-cv.pdf";
 import ME from "../../assets/me.png";
 
 import CtaButton from "../buttons/cta-button/cta-button.component";
