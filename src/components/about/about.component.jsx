@@ -50,8 +50,8 @@ const About = () => {
 						</div>
 					</div>
 					<p>
-						I am currently a Junior Front End Developer at Twilo
-						Creative, where we design, build and maintain,{" "}
+						I am currently a Front End Developer at Ilk Agency based
+						in leeds, where we design, build and maintain,{" "}
 						<strong>bespoke</strong>, <strong>custom</strong>{" "}
 						wordpress sites. My day to day activities include, site
 						maintainance, development of new client builds and

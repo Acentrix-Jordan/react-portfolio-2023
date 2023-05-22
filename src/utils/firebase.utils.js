@@ -1,5 +1,10 @@
 import { initializeApp } from "firebase/app";
-import { getFirestore, collection, addDoc } from "firebase/firestore";
+
+// Database
+import { getFirestore, collection, addDoc, getDocs } from "firebase/firestore";
+
+// Auth
+import { GoogleAuthProvider, getAuth, signInWithPopup } from "firebase/auth";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
@@ -29,4 +34,16 @@ export const submitFormToDb = async (data) => {
 	} catch (e) {
 		console.error("Error adding document: ", e);
 	}
+};
+
+export const getFormSubmissions = async () => {
+	return await getDocs(collection(db, "form-submissions"));
+};
+
+// Auth
+const auth = getAuth();
+const provider = new GoogleAuthProvider();
+
+export const signInWithGooglePopUp = () => {
+	return signInWithPopup(auth, provider);
 };

@@ -1,6 +1,6 @@
 import "./header.style.scss";
 
-import CV from "../../assets/jordan-wilson-front-end-developer-cv.pdf";
+// import CV from "../../assets/jordan-wilson-front-end-developer-cv.pdf";
 import ME from "../../assets/me.png";
 
 import CtaButton from "../buttons/cta-button/cta-button.component";
@@ -14,13 +14,13 @@ const Header = () => {
 				<h1>Jordan Wilson</h1>
 				<h5 className="text-light">Your favourite Front End Ninja</h5>
 				<div className="header__cta-container">
-					<CtaButton
+					{/* <CtaButton
 						href={CV}
 						download
 						className="btn"
 					>
 						Download CV
-					</CtaButton>
+					</CtaButton> */}
 					<CtaButton
 						href="#contact"
 						className="btn btn-primary"
