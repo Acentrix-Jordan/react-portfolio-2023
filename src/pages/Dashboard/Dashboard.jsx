@@ -13,7 +13,7 @@ const Dashboard = () => {
 			});
 			setFormSubmissions(formSubmissionsArray);
 		});
-	}, []);
+	});
 
 	return (
 		<div className="dashboard__container">
